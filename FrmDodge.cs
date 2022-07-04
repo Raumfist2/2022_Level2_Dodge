@@ -15,6 +15,7 @@ namespace _2022_Level2_Dodge
         Graphics g; //declare a graphics object called g
         // declare space for an array of 7 objects called planet 
         Planet[] planet = new Planet[7];
+        Random yspeed = new Random();
 
         public FrmDodge()
         {
@@ -33,6 +34,9 @@ namespace _2022_Level2_Dodge
             for (int i = 0; i < 7; i++)
             {
                 //call the Planet class's drawPlanet method to draw the images
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = yspeed.Next(5, 20);
+                planet[i].y += rndmspeed;
                 planet[i].DrawPlanet(g);
             }
 
@@ -51,6 +55,11 @@ namespace _2022_Level2_Dodge
 
             }
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
+        }
+
+        private void FrmDodge_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

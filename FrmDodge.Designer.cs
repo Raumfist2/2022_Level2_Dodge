@@ -58,6 +58,7 @@ namespace _2022_Level2_Dodge
             this.Name = "FrmDodge";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodge";
+            this.Load += new System.EventHandler(this.FrmDodge_Load);
             this.ResumeLayout(false);
 
         }
