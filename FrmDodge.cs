@@ -16,6 +16,7 @@ namespace _2022_Level2_Dodge
         // declare space for an array of 7 objects called planet 
         Planet[] planet = new Planet[7];
         Random yspeed = new Random();
+        Spaceship spaceship = new Spaceship();
 
         public FrmDodge()
         {
@@ -39,7 +40,7 @@ namespace _2022_Level2_Dodge
                 planet[i].y += rndmspeed;
                 planet[i].DrawPlanet(g);
             }
-
+            spaceship.DrawSpaceship(g);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
