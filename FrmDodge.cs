@@ -116,12 +116,28 @@ namespace _2022_Level2_Dodge
         private void FrmDodge_Load(object sender, EventArgs e)
         {
             // pass lives from LblLives Text property to lives variable
-            lives = int.Parse(LblLives.Text
+            lives = int.Parse(LblLives.Text);
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MnuStart_Click(object sender, EventArgs e)
+        {
+            score = 0;
+            LblScore.Text = score.ToString();
+            // pass lives from LblLives Text property to lives variable
+            lives = int.Parse(LblLives.Text);
+
+            TmrPlanet.Enabled = true;
+            TmrShip.Enabled = true;
+        }
+
+        private void MnuStop_Click(object sender, EventArgs e)
+        {
+            TmrShip.Enabled = false;
+            TmrPlanet.Enabled = false;
         }
 
 
